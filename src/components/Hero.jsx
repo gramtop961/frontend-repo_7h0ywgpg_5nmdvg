@@ -1,20 +1,14 @@
 import React from 'react';
-import Spline from '@splinetool/react-spline';
 import { ArrowRight, Rocket, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
     <section className="relative min-h-[80vh] w-full overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 text-white">
-      {/* Spline scene */}
-      <div className="absolute inset-0">
-        <Spline
-          scene="https://prod.spline.design/4cHQr84zOGAHOehh/scene.splinecode"
-          style={{ width: '100%', height: '100%' }}
-        />
+      {/* Decorative background shapes (no external assets) */}
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-fuchsia-600/20 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-violet-600/20 blur-3xl" />
       </div>
-
-      {/* Subtle gradient aura overlay to match theme (doesn't block interactions) */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/10 to-slate-900/70" />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-center px-6 pt-28 pb-24 text-center sm:pt-36">
         <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm backdrop-blur">
@@ -46,7 +40,7 @@ const Hero = () => {
           </a>
         </div>
 
-        <div className="pointer-events-none mt-14 grid w-full max-w-2xl grid-cols-2 gap-3 opacity-90 sm:max-w-3xl md:grid-cols-4">
+        <div className="pointer-events-none mt-14 grid w-full max-w-2xl grid-cols-2 gap-3 opacity-95 sm:max-w-3xl md:grid-cols-4">
           {[
             { label: 'Custom Resumes', stat: 'AI-tailored' },
             { label: 'Career Paths', stat: 'Data-driven' },
